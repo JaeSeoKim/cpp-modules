@@ -27,6 +27,14 @@ int		main( void ) {
 	// 계정 갯수를 담고 있는 변수
 	accounts_t				accounts( amounts, amounts + amounts_size );
 	// 계정에 대한 vector 생성, 초기 값으로 시작과, 끝을 전달.
+	// [19920104_091532] index:0;amount:42;created
+	// [19920104_091532] index:1;amount:54;created
+	// [19920104_091532] index:2;amount:957;created
+	// [19920104_091532] index:3;amount:432;created
+	// [19920104_091532] index:4;amount:1234;created
+	// [19920104_091532] index:5;amount:0;created
+	// [19920104_091532] index:6;amount:754;created
+	// [19920104_091532] index:7;amount:16576;created
 	accounts_t::iterator 	acc_begin	= accounts.begin();
 	// 계정의 시작
 	accounts_t::iterator 	acc_end		= accounts.end();
@@ -38,14 +46,6 @@ int		main( void ) {
 	// 예금 정보를 담고 있는 list 변수
 	ints_t				deposits( d, d + d_size );
 	// 예금 백터
-	// [19920104_091532] index:0;amount:42;created
-	// [19920104_091532] index:1;amount:54;created
-	// [19920104_091532] index:2;amount:957;created
-	// [19920104_091532] index:3;amount:432;created
-	// [19920104_091532] index:4;amount:1234;created
-	// [19920104_091532] index:5;amount:0;created
-	// [19920104_091532] index:6;amount:754;created
-	// [19920104_091532] index:7;amount:16576;created
 	ints_t::iterator 	dep_begin	= deposits.begin();
 	// 예금 백터 시작
 	ints_t::iterator 	dep_end		= deposits.end();

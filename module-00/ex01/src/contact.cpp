@@ -6,7 +6,7 @@
 /*   By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 19:01:29 by jaeskim           #+#    #+#             */
-/*   Updated: 2021/07/01 20:13:16 by jaeskim          ###   ########.fr       */
+/*   Updated: 2021/07/04 16:39:30 by jaeskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,14 +93,15 @@ void Contact::Search()
 
 	std::cout << "Search by Index : ";
 	std::cin >> _index;
+	std::cin.ignore();
 	if (std::cin.fail())
 	{
 		std::cout << "Error: wrong number" << std::endl;
 		std::cin.clear();
-		std::cin.ignore();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		return;
 	}
-	if (_index > index)
+	if (_index >= index || _index < 0)
 	{
 		std::cout << "Error: out of range" << std::endl;
 		return;

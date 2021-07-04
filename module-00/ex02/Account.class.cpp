@@ -108,7 +108,7 @@ bool Account::makeWithdrawal(int withdrawal)
 
 void Account::_displayTimestamp(void)
 {
-	time_t now = time(nullptr);
+	time_t now = time(NULL);
 	tm *now_tm = localtime(&now);
 
 	std::cout << std::setfill('0')

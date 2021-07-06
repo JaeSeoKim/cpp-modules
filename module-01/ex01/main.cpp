@@ -1,20 +1,10 @@
-#include "Pony.hpp"
-
-void ponyOnTheHeap(void)
-{
-	Pony *pony = new Pony("ponyOnTheHeap");
-
-	delete pony;
-}
-
-void ponyOnTheStack(void)
-{
-	Pony pony = Pony("ponyOnTheStack");
-}
+#include "Zombie.hpp"
 
 int main(void)
 {
-	ponyOnTheHeap();
-	ponyOnTheStack();
+	Zombie *zombies;
+
+	zombies = zombieHorde(42, "Hello");
+	delete[] zombies;
 	return (0);
 }

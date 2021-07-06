@@ -5,16 +5,18 @@
 
 class Zombie
 {
-private:
-	std::string type;
-	std::string name;
-	Zombie();
 
+private:
+	/* None */
 public:
+	std::string name;
+
+	Zombie();
 	Zombie(std::string name);
-	void setZombieType(std::string type);
 	void announce(void);
 	~Zombie();
 };
+
+Zombie *zombieHorde(int N, std::string name);
 
 #endif

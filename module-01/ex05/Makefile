@@ -6,11 +6,11 @@
 #    By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/06 21:07:58 by jaeskim           #+#    #+#              #
-#    Updated: 2021/07/07 20:03:17 by jaeskim          ###   ########.fr        #
+#    Updated: 2021/07/07 20:47:26 by jaeskim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Sed_is_for_losers
+NAME = Karen
 
 CC = clang++
 CFLAGS = -std=c++03 -Wall -Wextra -Werror
@@ -26,10 +26,12 @@ INC_DIR = .
 SRC_DIR = .
 OBJ_DIR = .
 
-INCS =
+INCS =	\
+	Karen.hpp
 
 SRCS =	\
-	main.cpp
+	main.cpp	\
+	Karen.cpp
 
 
 vpath %.cpp $(SRC_DIR)

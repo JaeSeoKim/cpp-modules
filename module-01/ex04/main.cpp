@@ -34,7 +34,7 @@ int main(int ac, char *av[])
 		std::cerr << "Error: Wrong filename!" << std::endl;
 		return (1);
 	}
-	std::ofstream ofile((filename + ".replace").data());
+	std::ofstream ofile(filename.append(".replace").data());
 	if (!ofile.is_open())
 	{
 		ifile.close();

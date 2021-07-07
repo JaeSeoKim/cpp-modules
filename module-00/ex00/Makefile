@@ -6,7 +6,7 @@
 #    By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/06 21:07:58 by jaeskim           #+#    #+#              #
-#    Updated: 2021/06/29 21:08:48 by jaeskim          ###   ########.fr        #
+#    Updated: 2021/07/07 21:13:44 by jaeskim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,7 @@ CRLF= \n$(LF)
 all : $(NAME)
 
 clean :
-	@$(RM) $(RMFLAGS) $(OBJ_DIR)
+	@$(RM) $(RMFLAGS) $(OBJS)
 	@printf "$(LF)🧹 $(FG_TEXT)Cleaning $(FG_TEXT_PRIMARY)$(NAME)'s Object files...\n"
 
 fclean : clean

@@ -6,11 +6,11 @@
 #    By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/06 21:07:58 by jaeskim           #+#    #+#              #
-#    Updated: 2021/07/14 15:12:41 by jaeskim          ###   ########.fr        #
+#    Updated: 2021/07/14 15:12:40 by jaeskim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ClapTrap
+NAME = ScavTrap
 
 CC = clang++
 CFLAGS = -std=c++03 -Wall -Wextra -Werror
@@ -28,10 +28,12 @@ OBJ_DIR = obj
 
 INCS = $(addprefix $(INC_DIR)/, \
 	ClapTrap.hpp	\
+	ScavTrap.hpp	\
 )
 
 SRCS = $(addprefix $(SRC_DIR)/, \
-	ClapTrap.cpp \
+	ClapTrap.cpp	\
+	ScavTrap.cpp	\
 	main.cpp	\
 )
 

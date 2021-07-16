@@ -5,7 +5,7 @@
 
 class ClapTrap
 {
-private:
+protected:
 	std::string name;
 	unsigned int hitPoints;
 	unsigned int energyPoints;
@@ -31,7 +31,7 @@ public:
 	void setEnergyPoints(unsigned int energyPoints);
 	void setAttackDamage(unsigned int attackDamage);
 
-	~ClapTrap();
+	virtual ~ClapTrap();
 };
 
 #endif // CLAPTRAP_HPP

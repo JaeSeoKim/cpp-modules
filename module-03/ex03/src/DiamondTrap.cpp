@@ -3,7 +3,7 @@
 
 DiamondTrap::DiamondTrap() : ClapTrap("default_clap_name"), ScavTrap(), FragTrap()
 {
-	std::cout << "🤖 FragTrap(void)" << std::endl;
+	std::cout << "💎 DiamondTrap(void)" << std::endl;
 	this->name = "default";
 	this->FragTrap::hitPoints = 100;
 	this->ScavTrap::energyPoints = 50;
@@ -11,7 +11,7 @@ DiamondTrap::DiamondTrap() : ClapTrap("default_clap_name"), ScavTrap(), FragTrap
 }
 DiamondTrap::DiamondTrap(std::string const &name) : ClapTrap(name + "_clap_name"), ScavTrap(), FragTrap()
 {
-	std::cout << "🤖 FragTrap(" << name << ")" << std::endl;
+	std::cout << "💎 DiamondTrap(" << name << ")" << std::endl;
 	this->name = name;
 	this->FragTrap::hitPoints = 100;
 	this->ScavTrap::energyPoints = 50;
@@ -30,5 +30,5 @@ void DiamondTrap::whoAmI()
 
 DiamondTrap::~DiamondTrap()
 {
-	std::cout << "⚰️ DiamondTrap(" << this->name << ") was destroyed!" << std::endl;
+	std::cout << "☠️ DiamondTrap(" << this->name << ") was destroyed!" << std::endl;
 }

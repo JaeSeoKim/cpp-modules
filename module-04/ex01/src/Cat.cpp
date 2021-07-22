@@ -31,7 +31,6 @@ Cat &Cat::operator=(Cat const &other)
 void Cat::makeSound() const
 {
 	std::cout << "Meow!!" << std::endl;
-	delete this->brain;
 }
 
 Brain *Cat::getBrain() const

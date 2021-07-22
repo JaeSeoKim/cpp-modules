@@ -6,15 +6,16 @@
 #    By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/06 21:07:58 by jaeskim           #+#    #+#              #
-#    Updated: 2021/07/22 17:46:12 by jaeskim          ###   ########.fr        #
+#    Updated: 2021/07/19 18:18:57 by jaeskim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Polymorphism
+NAME = BocalFantasy
 
 CC = clang++
 CFLAGS = -std=c++03 -Wall -Wextra -Werror
-# CFLAGS += -g3 -fsanitize=address
+# CFLAGS += -g3
+# CFLAGS += -fsanitize=address
 ifeq ($(DEBUG),true)
 	CFLAGS += -g
 endif
@@ -27,18 +28,22 @@ SRC_DIR = src
 OBJ_DIR = obj
 
 INCS = $(addprefix $(INC_DIR)/, \
-	Animal.hpp	\
-	Dog.hpp	\
-	Cat.hpp	\
-	Brain.hpp	\
+	AMateria.hpp \
+	Ice.hpp \
+	Cure.hpp \
+	Character.hpp \
+	MateriaSource.hpp \
+	ICharacter.hpp \
+	IMateriaSource.hpp \
 )
 
 SRCS = $(addprefix $(SRC_DIR)/, \
-	Animal.cpp \
-	Dog.cpp \
-	Cat.cpp \
-	Brain.cpp \
-	main.cpp	\
+	AMateria.cpp \
+	Ice.cpp \
+	Cure.cpp \
+	Character.cpp \
+	MateriaSource.cpp \
+	main.cpp \
 )
 
 vpath %.cpp $(SRC_DIR)

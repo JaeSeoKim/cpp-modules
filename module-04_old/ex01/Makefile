@@ -6,7 +6,7 @@
 #    By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/06 21:07:58 by jaeskim           #+#    #+#              #
-#    Updated: 2021/07/22 17:46:12 by jaeskim          ###   ########.fr        #
+#    Updated: 2021/07/17 16:50:09 by jaeskim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,17 +27,23 @@ SRC_DIR = src
 OBJ_DIR = obj
 
 INCS = $(addprefix $(INC_DIR)/, \
-	Animal.hpp	\
-	Dog.hpp	\
-	Cat.hpp	\
-	Brain.hpp	\
+	AWeapon.hpp	\
+	Enemy.hpp	\
+	PowerFist.hpp	\
+	SuperMutant.hpp	\
+	Character.hpp	\
+	PlasmaRifle.hpp	\
+	RadScorpion.hpp	\
 )
 
 SRCS = $(addprefix $(SRC_DIR)/, \
-	Animal.cpp \
-	Dog.cpp \
-	Cat.cpp \
-	Brain.cpp \
+	AWeapon.cpp	\
+	Enemy.cpp	\
+	PowerFist.cpp	\
+	SuperMutant.cpp	\
+	Character.cpp	\
+	PlasmaRifle.cpp	\
+	RadScorpion.cpp	\
 	main.cpp	\
 )
 

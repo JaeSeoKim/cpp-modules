@@ -6,16 +6,15 @@
 #    By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/06 21:07:58 by jaeskim           #+#    #+#              #
-#    Updated: 2021/07/19 17:14:28 by jaeskim          ###   ########.fr        #
+#    Updated: 2021/07/22 19:53:54 by jaeskim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = This_code_is_unclean.PURIFY_IT
+NAME = Polymorphism
 
 CC = clang++
 CFLAGS = -std=c++03 -Wall -Wextra -Werror
-# CFLAGS += -g3
-# CFLAGS += -fsanitize=address
+# CFLAGS += -g3 -fsanitize=address
 ifeq ($(DEBUG),true)
 	CFLAGS += -g
 endif
@@ -28,17 +27,17 @@ SRC_DIR = src
 OBJ_DIR = obj
 
 INCS = $(addprefix $(INC_DIR)/, \
-	Squad.hpp	\
-	TacticalMarine.hpp	\
-	AssaultTerminator.hpp	\
-	ISpaceMarine.hpp	\
-	ISquad.hpp	\
+	Animal.hpp	\
+	Dog.hpp	\
+	Cat.hpp	\
+	Brain.hpp	\
 )
 
 SRCS = $(addprefix $(SRC_DIR)/, \
-	Squad.cpp	\
-	TacticalMarine.cpp	\
-	AssaultTerminator.cpp	\
+	Animal.cpp \
+	Dog.cpp \
+	Cat.cpp \
+	Brain.cpp \
 	main.cpp	\
 )
 

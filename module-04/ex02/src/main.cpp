@@ -1,31 +1,33 @@
 #include <iostream>
-#include "TacticalMarine.hpp"
-#include "AssaultTerminator.hpp"
-#include "Squad.hpp"
+#include "Animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 
 int main()
 {
 	{
-		ISpaceMarine *bob = new TacticalMarine;
-		ISpaceMarine *jim = new AssaultTerminator;
-		ISquad *vlc = new Squad;
-
-		vlc->push(bob);
-		vlc->push(jim);
-		for (int i = 0; i < vlc->getCount(); ++i)
+		Animal *Animals[10];
+		for (int i = 0; i < 10; ++i)
 		{
-			ISpaceMarine *cur = vlc->getUnit(i);
-			cur->battleCry();
-			cur->rangedAttack();
-			cur->meleeAttack();
+			if (i % 2 == 0)
+				Animals[i] = new Dog();
+			else
+				Animals[i] = new Cat();
 		}
-		Squad vlc2((Squad &)(*vlc));
-		Squad vlc3((Squad &)(*vlc));
-		vlc2 = vlc3;
-		delete vlc;
+		std::cout << "DEEP COPY!!" << std::endl;
+		std::cout << "-----------------------------" << std::endl;
+		Dog copy(*(Dog *)Animals[4]);
+		for (int i = 0; i < 100; ++i)
+		{
+			std::cout << copy.getBrain()->getIdea(i) << "    ";
+			std::cout << ((Dog *)Animals[4])->getBrain()->getIdea(i) << std::endl;
+		}
+		std::cout << "-----------------------------"
+				  << std::endl;
+		for (int i = 0; i < 10; ++i)
+		{
+			delete Animals[i];
+		}
 	}
-	{
-		system("leaks This_code_is_unclean.PURIFY_IT");
-	}
-	return 0;
+	system("leaks Polymorphism");
 }

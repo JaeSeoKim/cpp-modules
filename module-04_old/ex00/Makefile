@@ -6,7 +6,7 @@
 #    By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/06 21:07:58 by jaeskim           #+#    #+#              #
-#    Updated: 2021/07/22 17:46:12 by jaeskim          ###   ########.fr        #
+#    Updated: 2021/07/16 18:16:05 by jaeskim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,17 +27,15 @@ SRC_DIR = src
 OBJ_DIR = obj
 
 INCS = $(addprefix $(INC_DIR)/, \
-	Animal.hpp	\
-	Dog.hpp	\
-	Cat.hpp	\
-	Brain.hpp	\
+	Sorcerer.hpp	\
+	Victim.hpp	\
+	Peon.hpp	\
 )
 
 SRCS = $(addprefix $(SRC_DIR)/, \
-	Animal.cpp \
-	Dog.cpp \
-	Cat.cpp \
-	Brain.cpp \
+	Sorcerer.cpp \
+	Victim.cpp \
+	Peon.cpp \
 	main.cpp	\
 )
 

@@ -1,34 +1,33 @@
-#include "PlasmaRifle.hpp"
-#include "PowerFist.hpp"
-#include "RadScorpion.hpp"
-#include "SuperMutant.hpp"
-#include "Enemy.hpp"
-#include "Character.hpp"
+#include <iostream>
+#include "Animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 
 int main()
 {
-	Character *me = new Character("me");
-	std::cout << *me;
-	Enemy *b = new RadScorpion();
-	Enemy *c = new SuperMutant();
-	AWeapon *pr = new PlasmaRifle();
-	AWeapon *pf = new PowerFist();
-	me->equip(pr);
-	std::cout << *me;
-	me->equip(pf);
-	me->attack(b);
-	std::cout << *me;
-	me->equip(pr);
-	std::cout << *me;
-	me->attack(b);
-	std::cout << *me;
-	me->attack(b);
-	std::cout << *me;
-	me->equip(pf);
-	for (int i = 0; i < 4; ++i)
 	{
-		me->recoverAP();
-		me->attack(c);
+		Animal *Animals[10];
+		for (int i = 0; i < 10; ++i)
+		{
+			if (i % 2 == 0)
+				Animals[i] = new Dog();
+			else
+				Animals[i] = new Cat();
+		}
+		std::cout << "DEEP COPY!!" << std::endl;
+		std::cout << "-----------------------------" << std::endl;
+		Dog copy(*(Dog *)Animals[4]);
+		for (int i = 0; i < 100; ++i)
+		{
+			std::cout << copy.getBrain()->getIdea(i) << "    ";
+			std::cout << ((Dog *)Animals[4])->getBrain()->getIdea(i) << std::endl;
+		}
+		std::cout << "-----------------------------"
+				  << std::endl;
+		for (int i = 0; i < 10; ++i)
+		{
+			delete Animals[i];
+		}
 	}
-	return 0;
+	system("leaks Polymorphism");
 }

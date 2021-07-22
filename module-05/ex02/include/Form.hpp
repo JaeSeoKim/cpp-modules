@@ -20,7 +20,7 @@ public:
 	Form(std::string const &target, std::string const &name, int signGrade, int execGrade);
 	Form(Form const &other);
 	Form &operator=(Form const &other);
-	~Form();
+	virtual ~Form();
 
 	std::string getTarget() const;
 	std::string getName() const;

@@ -51,7 +51,7 @@ int main()
 {
 	srand(time(NULL));
 
-	Bureaucrat jaeskim("jaeskim", 10);
+	Bureaucrat jaeskim("jaeskim", 1);
 	Bureaucrat wrong("wrong", 150);
 
 	ShrubberyCreationForm form1("target");

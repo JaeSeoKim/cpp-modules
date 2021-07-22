@@ -4,47 +4,13 @@
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 
-void do_beSigned(Form &form, Bureaucrat &bureaucrat)
-{
-	try
-	{
-		std::cout << form << std::endl;
-		form.beSigned(bureaucrat);
-	}
-	catch (const std::exception &e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-}
-void do_action(Form &form, Bureaucrat &bureaucrat)
-{
-	try
-	{
-		std::cout << form << std::endl;
-		form.action(bureaucrat);
-	}
-	catch (const std::exception &e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-}
-
 void test_form(Form &form, Bureaucrat &correct, Bureaucrat &wrong)
 {
-	std::cout << "try beSigned by wrong" << std::endl;
-	do_beSigned(form, wrong);
-
-	std::cout << "try action with not signed form" << std::endl;
-	do_action(form, correct);
-
-	std::cout << "try beSigned by correct" << std::endl;
-	do_beSigned(form, correct);
-
-	std::cout << "try action with signed form by wrong" << std::endl;
-	do_action(form, wrong);
-
-	std::cout << "try action with signed form by correct" << std::endl;
-	do_action(form, correct);
+	wrong.signForm(form);
+	correct.executeForm(form);
+	correct.signForm(form);
+	wrong.executeForm(form);
+	correct.executeForm(form);
 }
 
 int main()

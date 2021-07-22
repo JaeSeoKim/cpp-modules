@@ -2,7 +2,7 @@
 
 [![jaeskim's 42 CPP Module 04 Score](https://badge42.herokuapp.com/api/project/jaeskim/CPP%20Module%2004)](https://github.com/JaeSeoKim/badge42)
 
-> Inheritance
+> Subtype polymorphism, abstract classes, interfaces
 >
 > #### 📝 PDF
 >

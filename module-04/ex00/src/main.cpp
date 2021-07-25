@@ -3,18 +3,27 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
+
 int main()
 {
-	const Animal *meta = new Animal();
-	const Animal *j = new Dog();
-	const Animal *i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-
-	delete meta;
-	delete i;
-	delete j;
+	{
+		const Animal *meta = new Animal();
+		const Animal *dog = new Dog();
+		const Animal *cat = new Cat();
+		const WrongAnimal *wrong = new WrongCat();
+		std::cout << dog->getType() << std::endl;
+		std::cout << cat->getType() << std::endl;
+		cat->makeSound();
+		dog->makeSound();
+		meta->makeSound();
+		wrong->makeSound();
+		delete meta;
+		delete cat;
+		delete dog;
+		delete wrong;
+	}
+	system("leaks Polymorphism");
+	return (0);
 }

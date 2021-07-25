@@ -6,7 +6,7 @@
 #    By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/06 21:07:58 by jaeskim           #+#    #+#              #
-#    Updated: 2021/07/22 17:50:46 by jaeskim          ###   ########.fr        #
+#    Updated: 2021/07/22 21:48:40 by jaeskim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,8 @@ INCS = $(addprefix $(INC_DIR)/, \
 	Animal.hpp	\
 	Dog.hpp	\
 	Cat.hpp	\
+	WrongAnimal.hpp	\
+	WrongCat.hpp	\
 )
 
 SRCS = $(addprefix $(SRC_DIR)/, \
@@ -37,6 +39,8 @@ SRCS = $(addprefix $(SRC_DIR)/, \
 	Dog.cpp \
 	Cat.cpp \
 	main.cpp	\
+	WrongAnimal.cpp	\
+	WrongCat.cpp	\
 )
 
 vpath %.cpp $(SRC_DIR)

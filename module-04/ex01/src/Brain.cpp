@@ -52,10 +52,7 @@ Brain::~Brain()
 {
 	std::cout << "Destructor Brain:";
 	for (int i = 0; i < 100; ++i)
-	{
-		this->ideas[i] = ideas[rand() % (sizeof(ideas) / sizeof(std::string))];
 		std::cout << " " << this->ideas[i];
-	}
 	std::cout << std::endl;
 }
 

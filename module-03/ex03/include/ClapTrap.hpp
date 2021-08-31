@@ -35,3 +35,4 @@ public:
 };
 
 #endif // CLAPTRAP_HPP
+

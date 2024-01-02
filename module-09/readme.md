@@ -31,6 +31,7 @@ C++는 C 프로그래밍 언어 또는 "클래스가 있는 C"의 확장으로 B
 The goal of these modules is to introduce you to Object-Oriented Programming. This will be the starting point of your C++ journey. Many languages are recommended to learn OOP. We decided to choose C++ since it’s derived from your old friend C. Because this is a complex language, and in order to keep things simple, your code will comply with the C++98 standard.
 
 이 모듈의 목표는 객체 지향 프로그래밍을 소개하는 것입니다. 이것이 C++ 여정의 시작점이 될 것입니다. OOP를 배우기 위해 많은 언어가 권장됩니다. C++는 여러분의 오랜 친구인 C에서 파생된 언어이기 때문에 C++를 선택하기로 결정했습니다. C++는 복잡한 언어이며, 코드를 단순하게 유지하기 위해 C++98 표준을 준수합니다.
+
 We are aware modern C++ is way different in a lot of aspects. So if you want to become a proficient C++ developer, it’s up to you to go further after the 42 Common Core!
 
 최신 C++는 여러 측면에서 많이 다르다는 것을 알고 있습니다. 따라서 능숙한 C++ 개발자가 되고 싶다면 42가지 공통 코어 이후에도 더 발전하는 것은 여러분의 몫입니다!
@@ -208,7 +209,7 @@ Here is an example of an input.txt file:
 
 다음은 input.txt 파일의 예시 입니다:
 
-```bash
+```sh
 $> head input.txt
 date | value
 2011-01-03 | 3
@@ -241,7 +242,7 @@ The following is an example of the program’s use.
 
 다음은 프로그램 사용 예시 입니다.
 
-```bash
+```sh
 $> ./btc
 Error: could not open file.
 $> ./btc input.txt
@@ -263,3 +264,61 @@ $>
 > [!CAUTION]
 > 경고: 이 문제에서 사용한 컨테이너는 이 모듈의 나머지 부분에서는 더 이상 사용할 수 없습니다.
 
+# Chapter 5
+
+## Exercise 01: Reverse Polish Notation
+
+| Exercise 01         | RPN                                |
+| ------------------- | ---------------------------------- |
+| Turn-in directory   | ex01/                              |
+| Files to turn in    | Makefile, main.cpp, RPN.{cpp, hpp} |
+| Forbidden functions | None                               |
+
+You must create a program with these constraints:
+
+프로그램은 다음의 제약 조건을 따라 만들어야 합니다:
+
+- The program name is RPN.
+- 프로그램 이름은 RPN 입니다.
+- Your program must take an inverted Polish mathematical expression as an argument.
+- 프로그램은 반전된 폴란드 수학식을 인자로 사용해야 합니다.
+- The numbers used in this operation and passed as arguments will always be less than 10. The calculation itself but also the result do not take into account this rule.
+- 연산에서 사용되며 인자로 전달되는 숫자는 항상 10보다 작습니다. 계산 자체는 물론 결과도 이 규칙을 고려하지 않습니다.
+- If an error occurs during the execution of the program an error message should be displayed on the standard output.
+- 만약 예외로 인한 에러가 발생하면 프로그램은 에러 메시지를 표준 출력을 통해 보여야 합니다.
+- Your program must be able to handle operations with these tokens: "+ - / \*".
+- 프로그램은 다음의 토큰들: "+ - / \*" 을 연산자로 사용이 가능해야 합니다.
+
+> [!CAUTION]
+> You must use at least one container in your code to validate this exercise.
+
+> [!CAUTION]
+> 과제에 통과하기 위해서는 한개 이상의 container를 코드에 사용해야 합니다.
+
+> [!TIP]
+> You don’t need to manage the brackets or decimal numbers
+
+> [!TIP]
+> 괄호와 음수를 처리할 필요가 없습니다.
+
+Here is an example of a standard use:
+
+다음은 일반적으로 사용하는 예시 입니다:
+
+```sh
+$> ./RPN "8 9 * 9 - 9 - 9 - 4 - 1 +"
+42
+$> ./RPN "7 7 * 7 -"
+42
+$> ./RPN "1 2 * 2 / 2 * 2 4 - +"
+0
+$> ./RPN "(1 + 1)"
+Error
+$>
+```
+
+> [!CAUTION]
+> Warning: The container(s) you used in the previous exercise are forbidden here. The container(s) you used to validate this exercise will not be usable for the rest of this module.
+
+> [!CAUTION]
+> 경고: 이전 과제에서 사용한 Container(들)은 여기에서는 금지됩니다. 이 과제에서 평가하는데 사용한 Container(들)은 이 모듈의 나머지 부분에서는 더 이상 사용할 수 없습니다.
